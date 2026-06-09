@@ -1,0 +1,8 @@
+<h2>Delete User</h2>
+<p>Are you sure you want to permanently delete the user: <strong>{{ user.username }}</strong>?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit" style="background-color:red; color:white;">Yes, Confirm Delete</button>
+    <a href="{% url 'user_list' %}">Cancel</a>
+</form>
